@@ -16,4 +16,18 @@ for cidade in heuristica_bucareste:
         print(f'{cidade}: {heuristica_bucareste[cidade]} km')
 
 # desafio1 - 3
+print()
+print('Estrada mais longa: ')
+print()
+max_custo = 0
+cidade_origem = ''
+cidade_destino = ''
 
+for cidade in mapa_romenia:
+    for vizinho, custo in mapa_romenia[cidade]:
+        if custo > max_custo:
+            max_custo = custo
+            cidade_origem = cidade
+            cidade_destino = vizinho
+
+print(f'De {cidade_origem} até {cidade_destino}: {max_custo} km')
